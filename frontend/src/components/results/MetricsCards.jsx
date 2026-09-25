@@ -11,14 +11,14 @@ export const MetricsCards = ({ metrics, loading }) => {
       value: hasData ? `${(metrics.precision * 100).toFixed(1)}%` : null,
       sub: 'Exact business matches',
       icon: Target,
-      color: 'text-indigo-600 bg-indigo-50 border-indigo-200',
+      color: 'text-purple-700 bg-purple-50 border border-purple-200/80',
     },
     {
       label: 'Recall',
       value: hasData ? `${(metrics.recall * 100).toFixed(1)}%` : null,
       sub: 'Ground truth coverage',
       icon: Zap,
-      color: 'text-blue-600 bg-blue-50 border-blue-200',
+      color: 'text-violet-600 bg-purple-50/70 border border-purple-200/60',
     },
     {
       label: 'F0.5 Score',
@@ -32,7 +32,7 @@ export const MetricsCards = ({ metrics, loading }) => {
       value: metrics?.source1Records?.toLocaleString() || null,
       sub: 'Master entity records',
       icon: Users,
-      color: 'text-slate-700 bg-slate-100 border-slate-200',
+      color: 'text-purple-900 bg-purple-50/60 border border-purple-150',
     },
     {
       label: 'Total Matches',
@@ -53,7 +53,7 @@ export const MetricsCards = ({ metrics, loading }) => {
       value: metrics?.candidatePairs?.toLocaleString() || null,
       sub: 'Evaluated blocking pairs',
       icon: Layers,
-      color: 'text-purple-700 bg-purple-50 border-purple-200',
+      color: 'text-purple-700 bg-purple-100/80 border border-purple-200',
     },
   ];
 
@@ -64,7 +64,7 @@ export const MetricsCards = ({ metrics, loading }) => {
         return (
           <div
             key={idx}
-            className="bg-white rounded-xl border border-slate-200 p-3.5 shadow-card flex flex-col justify-between"
+            className="bg-white rounded-xl border border-purple-100 hover:border-purple-200 p-3.5 shadow-card flex flex-col justify-between"
           >
             <div className="flex items-center justify-between mb-2">
               <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wide truncate">

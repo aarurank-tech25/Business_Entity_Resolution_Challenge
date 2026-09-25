@@ -58,7 +58,7 @@ export const PageContainer = ({
 
       {/* Page Header (if title is provided) */}
       {(title || subtitle || actions) && (
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-slate-200/70">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-purple-100">
           <div>
             {title && <h2 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">{title}</h2>}
             {subtitle && <p className="text-xs sm:text-sm text-slate-500 mt-1">{subtitle}</p>}

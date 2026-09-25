@@ -86,7 +86,7 @@ export const Settings = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-semibold text-slate-700 mb-1">
-                  Backend API Base URL (<code className="font-mono text-indigo-700">VITE_API_BASE_URL</code>)
+                  Backend API Base URL (<code className="font-mono text-purple-700 bg-purple-50 border border-purple-200/60 px-1 py-0.5 rounded">VITE_API_BASE_URL</code>)
                 </label>
                 <div className="flex items-center gap-2">
                   <input
@@ -187,23 +187,23 @@ export const Settings = () => {
                 Registered API Contract Endpoints (Configurable in <code className="font-mono">src/services/api.js</code>)
               </span>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-[11px] font-mono">
-                <div className="p-2 bg-slate-50 border border-slate-200 rounded">
+                <div className="p-2 bg-purple-50/30 border border-purple-150 rounded">
                   <span className="text-emerald-700 font-bold">POST</span> /upload
                 </div>
-                <div className="p-2 bg-slate-50 border border-slate-200 rounded">
+                <div className="p-2 bg-purple-50/30 border border-purple-150 rounded">
                   <span className="text-emerald-700 font-bold">POST</span> /run-matching
                 </div>
-                <div className="p-2 bg-slate-50 border border-slate-200 rounded">
-                  <span className="text-blue-700 font-bold">GET</span> /results
+                <div className="p-2 bg-purple-50/30 border border-purple-150 rounded">
+                  <span className="text-purple-700 font-bold">GET</span> /results
                 </div>
-                <div className="p-2 bg-slate-50 border border-slate-200 rounded">
-                  <span className="text-blue-700 font-bold">GET</span> /candidates
+                <div className="p-2 bg-purple-50/30 border border-purple-150 rounded">
+                  <span className="text-purple-700 font-bold">GET</span> /candidates
                 </div>
-                <div className="p-2 bg-slate-50 border border-slate-200 rounded">
-                  <span className="text-blue-700 font-bold">GET</span> /metrics
+                <div className="p-2 bg-purple-50/30 border border-purple-150 rounded">
+                  <span className="text-purple-700 font-bold">GET</span> /metrics
                 </div>
-                <div className="p-2 bg-slate-50 border border-slate-200 rounded">
-                  <span className="text-blue-700 font-bold">GET</span> /download/matching-results
+                <div className="p-2 bg-purple-50/30 border border-purple-150 rounded">
+                  <span className="text-purple-700 font-bold">GET</span> /download/matching-results
                 </div>
               </div>
             </div>
@@ -228,8 +228,8 @@ export const Settings = () => {
                     onClick={() => updateTableDensity(density)}
                     className={`px-3 py-1.5 rounded-lg text-xs capitalize transition-colors cursor-pointer border ${
                       tableDensity === density
-                        ? 'bg-indigo-600 text-white border-indigo-600 font-semibold shadow-xs'
-                        : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                        ? 'bg-purple-600 text-white border-purple-600 font-semibold shadow-xs'
+                        : 'bg-white text-slate-700 border-purple-200 hover:bg-purple-50/50'
                     }`}
                   >
                     {density}
@@ -246,12 +246,13 @@ export const Settings = () => {
                 Theme
               </label>
               <div className="flex items-center gap-2">
-                <span className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200">
-                  Enterprise Light (Default)
+                <span className="px-3 py-1.5 rounded-lg text-xs font-semibold bg-purple-100 text-purple-800 border border-purple-300 shadow-xs flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-purple-600" />
+                  Light Lavender (Active)
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 mt-1.5">
-                Clean high-contrast theme optimized for data density.
+                Refined soft lavender palette with purple/violet accents.
               </p>
             </div>
 
@@ -296,9 +297,9 @@ export const Settings = () => {
                   <span className="font-semibold text-slate-900 block">Member 3</span>
                   <span className="text-slate-500">FastAPI Backend Pipeline Services</span>
                 </div>
-                <div className="p-2 rounded bg-indigo-50 border border-indigo-200">
-                  <span className="font-semibold text-indigo-900 block">Member 4 (Current)</span>
-                  <span className="text-indigo-700">React Frontend / UI-UX Architecture</span>
+                <div className="p-2 rounded-xl bg-purple-50/80 border border-purple-200 text-purple-950">
+                  <span className="font-bold text-purple-950 block">Member 4 (Current)</span>
+                  <span className="text-purple-700 font-medium">React Frontend / UI-UX Architecture</span>
                 </div>
               </div>
             </div>

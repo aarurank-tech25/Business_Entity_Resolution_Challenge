@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { UploadCloud, FileSpreadsheet, CheckCircle2, AlertCircle, X, Loader2 } from 'lucide-react';
+import { UploadCloud, FileSpreadsheet, CheckCircle2, AlertCircle, X } from 'lucide-react';
 import Button from '../common/Button';
 import Badge from '../common/Badge';
 
@@ -90,9 +90,9 @@ export const FileUploadCard = ({
   };
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 shadow-card overflow-hidden flex flex-col justify-between transition-all hover:border-slate-300">
+    <div className="bg-white rounded-xl border border-purple-100 shadow-card overflow-hidden flex flex-col justify-between transition-all hover:border-purple-300">
       {/* Card Header */}
-      <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50/50">
+      <div className="p-4 border-b border-purple-100/70 flex items-center justify-between bg-purple-50/25">
         <div>
           <div className="flex items-center gap-2">
             <h4 className="text-sm font-bold text-slate-900">{sourceTitle}</h4>
@@ -114,10 +114,10 @@ export const FileUploadCard = ({
               </Badge>
             )}
           </div>
-          <p className="text-xs text-slate-500 mt-0.5">{description}</p>
+          <p className="text-xs text-purple-900/60 mt-0.5">{description}</p>
         </div>
 
-        <FileSpreadsheet className="w-5 h-5 text-indigo-500" />
+        <FileSpreadsheet className="w-5 h-5 text-purple-600" />
       </div>
 
       {/* Body / Upload Area */}
@@ -156,8 +156,8 @@ export const FileUploadCard = ({
             onDrop={handleDrop}
             className={`border-2 border-dashed rounded-xl p-6 text-center transition-all flex flex-col items-center justify-center ${
               dragActive
-                ? 'border-indigo-500 bg-indigo-50/40'
-                : 'border-slate-200 hover:border-slate-300 bg-slate-50/30'
+                ? 'border-purple-500 bg-purple-50/50'
+                : 'border-purple-200/80 hover:border-purple-400 bg-purple-50/20'
             }`}
           >
             <input
@@ -169,7 +169,7 @@ export const FileUploadCard = ({
               id={`upload-${sourceKey}`}
             />
 
-            <div className="w-10 h-10 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3">
+            <div className="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center mb-3 border border-purple-200/60">
               <UploadCloud className="w-5 h-5" />
             </div>
 
@@ -178,7 +178,7 @@ export const FileUploadCard = ({
                 <p className="text-xs font-semibold text-slate-800 truncate px-2">
                   {selectedFile.name}
                 </p>
-                <p className="text-[11px] text-slate-500 mt-0.5">
+                <p className="text-[11px] text-purple-900/60 mt-0.5">
                   {(selectedFile.size / 1024 / 1024).toFixed(2)} MB
                 </p>
                 <div className="flex items-center justify-center gap-2 mt-3">
@@ -197,13 +197,13 @@ export const FileUploadCard = ({
               </div>
             ) : uploadState === 'uploading' ? (
               <div className="w-full px-2">
-                <div className="flex items-center justify-between text-xs font-medium text-indigo-700 mb-1">
+                <div className="flex items-center justify-between text-xs font-semibold text-purple-800 mb-1">
                   <span>Uploading to server...</span>
                   <span>{uploadProgress}%</span>
                 </div>
-                <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                <div className="w-full bg-purple-100 h-2 rounded-full overflow-hidden">
                   <div
-                    className="bg-indigo-600 h-full transition-all duration-200"
+                    className="bg-purple-600 h-full transition-all duration-200"
                     style={{ width: `${uploadProgress}%` }}
                   />
                 </div>
@@ -212,12 +212,12 @@ export const FileUploadCard = ({
               <div>
                 <label
                   htmlFor={`upload-${sourceKey}`}
-                  className="text-xs font-semibold text-indigo-600 hover:text-indigo-700 hover:underline cursor-pointer"
+                  className="text-xs font-semibold text-purple-700 hover:text-purple-900 hover:underline cursor-pointer"
                 >
                   Click to browse
                 </label>
-                <span className="text-xs text-slate-500"> or drag & drop</span>
-                <p className="text-[11px] text-slate-400 mt-1">
+                <span className="text-xs text-purple-900/60"> or drag & drop</span>
+                <p className="text-[11px] text-purple-400 mt-1">
                   Supports CSV, TSV (Max 50MB)
                 </p>
               </div>
@@ -232,7 +232,7 @@ export const FileUploadCard = ({
               <AlertCircle className="w-4 h-4 text-rose-600 shrink-0" />
               <span>{errorMessage}</span>
             </div>
-            <button onClick={() => setUploadState('empty')} className="text-rose-600 hover:underline">
+            <button onClick={() => setUploadState('empty')} className="text-rose-600 hover:underline cursor-pointer">
               Dismiss
             </button>
           </div>
@@ -240,9 +240,9 @@ export const FileUploadCard = ({
       </div>
 
       {/* Card Footer: Metadata / Status */}
-      <div className="px-5 py-2.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+      <div className="px-5 py-2.5 bg-purple-50/20 border-t border-purple-100/60 flex items-center justify-between text-[11px] text-purple-900/60">
         <span>Target: FastAPI /upload</span>
-        <span className="font-mono text-slate-400">{sourceKey}</span>
+        <span className="font-mono text-purple-700 font-semibold">{sourceKey}</span>
       </div>
     </div>
   );

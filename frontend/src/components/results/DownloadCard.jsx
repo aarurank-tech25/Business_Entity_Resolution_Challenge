@@ -53,7 +53,7 @@ export const DownloadCard = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {/* Matching Results TSV */}
-      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-card flex flex-col justify-between hover:border-indigo-300 transition-all">
+      <div className="bg-white rounded-xl border border-purple-100 p-5 shadow-card flex flex-col justify-between hover:border-purple-300 transition-all">
         <div className="flex items-start gap-3.5">
           <div className="p-3 bg-emerald-50 text-emerald-600 rounded-xl shrink-0">
             <FileText className="w-6 h-6" />
@@ -74,7 +74,7 @@ export const DownloadCard = () => {
           </div>
         </div>
 
-        <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+        <div className="mt-5 pt-3 border-t border-purple-100/60 flex items-center justify-between">
           <span className="text-xs font-mono text-slate-600 font-medium">matching_results.tsv</span>
           <Button
             variant="success"
@@ -89,15 +89,15 @@ export const DownloadCard = () => {
       </div>
 
       {/* Candidate Pairs TSV */}
-      <div className="bg-white rounded-xl border border-slate-200 p-5 shadow-card flex flex-col justify-between hover:border-indigo-300 transition-all">
+      <div className="bg-white rounded-xl border border-purple-100 p-5 shadow-card flex flex-col justify-between hover:border-purple-300 transition-all">
         <div className="flex items-start gap-3.5">
-          <div className="p-3 bg-indigo-50 text-indigo-600 rounded-xl shrink-0">
+          <div className="p-3 bg-purple-50 text-purple-600 rounded-xl shrink-0 border border-purple-100">
             <FileText className="w-6 h-6" />
           </div>
           <div>
             <div className="flex items-center gap-2">
               <h4 className="text-sm font-bold text-slate-900">Candidate Pairs TSV</h4>
-              <span className="text-[11px] font-mono bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-semibold">
+              <span className="text-[11px] font-mono bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-semibold">
                 .tsv
               </span>
             </div>

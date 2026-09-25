@@ -47,7 +47,7 @@ export const MatchingStatus = ({
             Pre-Run Ingestion Summary
           </h4>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div className="p-4 rounded-xl bg-purple-50/25 border border-purple-150">
               <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
                 <span>Source 1 Records</span>
                 <Badge variant={datasetStatus?.source1?.uploaded || isMockMode ? 'success' : 'default'} size="sm">
@@ -66,7 +66,7 @@ export const MatchingStatus = ({
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div className="p-4 rounded-xl bg-purple-50/25 border border-purple-150">
               <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
                 <span>Source 2 Records</span>
                 <Badge variant={datasetStatus?.source2?.uploaded || isMockMode ? 'success' : 'default'} size="sm">
@@ -85,7 +85,7 @@ export const MatchingStatus = ({
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div className="p-4 rounded-xl bg-purple-50/25 border border-purple-150">
               <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
                 <span>Source 3 Records</span>
                 <Badge variant={datasetStatus?.source3?.uploaded || isMockMode ? 'success' : 'default'} size="sm">
@@ -161,7 +161,7 @@ export const MatchingStatus = ({
                 Upload all 3 datasets before executing the candidate blocking & ML pipeline.
               </span>
             ) : (
-              <span>Target FastAPI endpoint: <code className="font-mono text-indigo-700 bg-indigo-50 px-1 py-0.5 rounded">POST /run-matching</code></span>
+              <span>Target FastAPI endpoint: <code className="font-mono text-purple-700 bg-purple-50 border border-purple-200/60 px-1.5 py-0.5 rounded">POST /run-matching</code></span>
             )}
           </div>
 

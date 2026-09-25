@@ -32,7 +32,7 @@ export const ResultsTable = ({ results = [], loading }) => {
       sortable: true,
       render: (val, row) => (
         <div className="flex flex-col">
-          <span className="font-mono text-xs font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded w-fit">
+          <span className="font-mono text-xs font-bold text-purple-700 bg-purple-50 border border-purple-200/60 px-2 py-0.5 rounded w-fit">
             {val}
           </span>
           {row.source1_name && (
@@ -118,13 +118,13 @@ export const ResultsTable = ({ results = [], loading }) => {
       <Card bodyClassName="p-4" className="bg-white">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div className="relative sm:col-span-2">
-            <Search className="w-4 h-4 absolute left-3 top-3 text-slate-400" />
+            <Search className="w-4 h-4 absolute left-3 top-3 text-purple-400" />
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search Source 1 ID, Business Name, or Matched ID..."
-              className="w-full text-xs pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              className="w-full text-xs pl-9 pr-3 py-2 bg-purple-50/30 border border-purple-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-400"
             />
           </div>
 
@@ -132,7 +132,7 @@ export const ResultsTable = ({ results = [], loading }) => {
             <select
               value={decisionFilter}
               onChange={(e) => setDecisionFilter(e.target.value)}
-              className="w-full text-xs px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 cursor-pointer"
+              className="w-full text-xs px-3 py-2 bg-purple-50/30 border border-purple-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-400 cursor-pointer text-slate-800"
             >
               <option value="ALL">All Decisions (Matches & Singletons)</option>
               <option value="MATCH">Matches Only</option>

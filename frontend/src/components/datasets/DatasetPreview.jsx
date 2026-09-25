@@ -34,7 +34,7 @@ export const DatasetPreview = ({ datasets, loading }) => {
             return <span className="text-slate-400 italic font-mono text-xs">null</span>;
           }
           if (key.toLowerCase().includes('id')) {
-            return <span className="font-mono font-medium text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded text-xs">{value}</span>;
+            return <span className="font-mono font-medium text-purple-700 bg-purple-50 border border-purple-200/60 px-1.5 py-0.5 rounded text-xs">{value}</span>;
           }
           if (key.toLowerCase().includes('country')) {
             return (
@@ -63,15 +63,15 @@ export const DatasetPreview = ({ datasets, loading }) => {
       icon={Eye}
       loading={loading}
       actions={
-        <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg">
+        <div className="flex items-center gap-1 bg-purple-100/60 p-1 rounded-lg border border-purple-200/60">
           {['source1', 'source2', 'source3'].map((key) => (
             <button
               key={key}
               onClick={() => setSelectedSource(key)}
               className={`px-3 py-1 rounded-md text-xs font-medium transition-colors cursor-pointer ${
                 selectedSource === key
-                  ? 'bg-white text-indigo-600 shadow-xs font-semibold'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'bg-white text-purple-700 shadow-xs font-semibold'
+                  : 'text-purple-900/70 hover:text-purple-950'
               }`}
             >
               {sourceLabels[key]}
@@ -133,19 +133,19 @@ export const DatasetPreview = ({ datasets, loading }) => {
 
           {/* Optional Country Distribution from Backend */}
           {currentDataset.countryDistribution && currentDataset.countryDistribution.length > 0 && (
-            <div className="p-3.5 rounded-lg bg-indigo-50/40 border border-indigo-100">
-              <div className="text-xs font-semibold text-indigo-900 mb-2 flex items-center gap-1.5">
-                <Globe2 className="w-3.5 h-3.5 text-indigo-600" />
+            <div className="p-3.5 rounded-lg bg-purple-50/40 border border-purple-200/80">
+              <div className="text-xs font-semibold text-purple-950 mb-2 flex items-center gap-1.5">
+                <Globe2 className="w-3.5 h-3.5 text-purple-600" />
                 <span>Backend Country Distribution</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {currentDataset.countryDistribution.map((item, idx) => (
                   <div
                     key={idx}
-                    className="inline-flex items-center gap-1.5 text-xs bg-white px-2.5 py-1 rounded-md border border-indigo-200 shadow-xs"
+                    className="inline-flex items-center gap-1.5 text-xs bg-white px-2.5 py-1 rounded-md border border-purple-200 shadow-xs"
                   >
                     <span className="text-slate-700">{item.country}:</span>
-                    <span className="font-bold text-indigo-700">{item.count.toLocaleString()}</span>
+                    <span className="font-bold text-purple-700">{item.count.toLocaleString()}</span>
                   </div>
                 ))}
               </div>

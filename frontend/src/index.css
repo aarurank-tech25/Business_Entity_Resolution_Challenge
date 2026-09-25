@@ -4,17 +4,20 @@
 
 @layer base {
   :root {
-    --primary: #4F46E5;
-    --navy-header: #0F172A;
+    --primary: #7C3AED;
+    --primary-hover: #6D28D9;
+    --lavender-bg: #FAF8FF;
+    --lavender-card: #FFFFFF;
+    --lavender-border: #EFE8FE;
   }
 
   body {
-    @apply bg-slate-50 text-slate-800 antialiased font-sans m-0 p-0;
+    @apply bg-[#FAF8FF] text-slate-800 antialiased font-sans m-0 p-0;
     overflow-x: hidden;
   }
 
   #root {
-    @apply min-h-screen flex flex-col;
+    @apply min-h-screen flex flex-col bg-[#FAF8FF];
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -23,23 +26,23 @@
   }
 }
 
-/* Custom scrollbars for data tables and panels */
+/* Custom lavender scrollbars for data tables and panels */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #F7F4FE;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
+  background: #D9C8FC;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #A37EF5;
 }
 
 /* Subtle transitions */
@@ -55,4 +58,9 @@
 
 .animate-subtle-pulse {
   animation: subtle-pulse 3s infinite ease-in-out;
+}
+
+/* Subtle lavender gradient accent */
+.bg-lavender-subtle {
+  background: linear-gradient(135deg, #FAF8FF 0%, #F5F0FF 100%);
 }

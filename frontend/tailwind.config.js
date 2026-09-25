@@ -7,31 +7,40 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50: '#EEF2FF',
-          100: '#E0E7FF',
-          200: '#C7D2FE',
-          300: '#A5B4FC',
-          400: '#818CF8',
-          500: '#6366F1',
-          600: '#4F46E5',
-          700: '#4338CA',
-          800: '#3730A3',
-          900: '#312E81',
-          950: '#1E1B4B',
+        // Light Lavender Core Palette
+        lavender: {
+          25: '#FDFCFE',
+          50: '#F7F4FE',
+          100: '#EFE8FE',
+          150: '#E6DCFD',
+          200: '#D9C8FC',
+          300: '#C0A6F9',
+          400: '#A37EF5',
+          500: '#8B5CF6',
+          600: '#7C3AED',
+          700: '#6D28D9',
+          800: '#5B21B6',
+          900: '#4C1D95',
+          950: '#2E1065',
         },
-        navy: {
-          50: '#F0F4F8',
-          100: '#D9E2EC',
-          200: '#BCCCDC',
-          300: '#9FB3C8',
-          400: '#829AB1',
-          500: '#627D98',
-          600: '#486581',
-          700: '#334E68',
-          800: '#243B53',
-          900: '#102A43',
-          950: '#0B1B2B',
+        brand: {
+          50: '#F7F4FE',
+          100: '#EFE8FE',
+          200: '#DDD2FE',
+          300: '#C4B5FD',
+          400: '#A78BFA',
+          500: '#8B5CF6',
+          600: '#7C3AED',
+          700: '#6D28D9',
+          800: '#5B21B6',
+          900: '#4C1D95',
+          950: '#2E1065',
+        },
+        twilight: {
+          700: '#322550',
+          800: '#22183A',
+          900: '#171028',
+          950: '#0E091C',
         },
         match: {
           50: '#ECFDF5',
@@ -41,10 +50,10 @@ export default {
           700: '#047857',
         },
         nomatch: {
-          50: '#F8FAFC',
-          100: '#F1F5F9',
-          500: '#64748B',
-          600: '#475569',
+          50: '#FAF8FC',
+          100: '#F3EEF9',
+          500: '#7C7389',
+          600: '#5E546C',
         }
       },
       fontFamily: {
@@ -52,9 +61,10 @@ export default {
         mono: ['JetBrains Mono', 'Fira Code', 'Menlo', 'monospace'],
       },
       boxShadow: {
-        'card': '0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05)',
-        'card-hover': '0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04)',
-        'elevation': '0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05)',
+        'card': '0 1px 3px 0 rgba(109, 40, 217, 0.05), 0 1px 2px -1px rgba(109, 40, 217, 0.04)',
+        'card-hover': '0 10px 20px -3px rgba(109, 40, 217, 0.09), 0 4px 6px -4px rgba(109, 40, 217, 0.04)',
+        'lavender-glow': '0 0 25px rgba(139, 92, 246, 0.18)',
+        'elevation': '0 20px 25px -5px rgba(30, 16, 50, 0.08), 0 8px 10px -6px rgba(30, 16, 50, 0.04)',
       }
     },
   },

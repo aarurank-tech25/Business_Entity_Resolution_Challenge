@@ -89,21 +89,21 @@ export const PipelineProgress = ({
             <span className="flex items-center gap-1.5">
               <span>Overall Progress</span>
               {pipelineStatus === 'running' && (
-                <span className="text-[11px] text-indigo-600 font-normal">
+                <span className="text-[11px] text-purple-600 font-normal">
                   (Stage {currentStageIndex + 1} of {PIPELINE_STAGES.length}: {PIPELINE_STAGES[currentStageIndex]?.name})
                 </span>
               )}
             </span>
-            <span className="font-mono text-sm text-indigo-600 font-bold">{overallProgress}%</span>
+            <span className="font-mono text-sm text-purple-700 font-bold">{overallProgress}%</span>
           </div>
-          <div className="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden border border-slate-200/60">
+          <div className="w-full bg-purple-100/70 h-2.5 rounded-full overflow-hidden border border-purple-200/60">
             <div
               className={`h-full rounded-full transition-all duration-300 ${
                 pipelineStatus === 'failed'
                   ? 'bg-rose-500'
                   : pipelineStatus === 'completed'
                   ? 'bg-emerald-500'
-                  : 'bg-indigo-600'
+                  : 'bg-purple-600'
               }`}
               style={{ width: `${overallProgress}%` }}
             />
@@ -123,10 +123,10 @@ export const PipelineProgress = ({
                   status === 'completed'
                     ? 'bg-emerald-50/40 border-emerald-200 text-emerald-950'
                     : status === 'running'
-                    ? 'bg-indigo-50 border-indigo-300 shadow-sm ring-2 ring-indigo-200 text-indigo-950 animate-subtle-pulse'
+                    ? 'bg-purple-50 border-purple-300 shadow-lavender-glow ring-2 ring-purple-200 text-purple-950 animate-subtle-pulse'
                     : status === 'failed'
                     ? 'bg-rose-50 border-rose-300 text-rose-950'
-                    : 'bg-slate-50 border-slate-200 text-slate-600 opacity-80'
+                    : 'bg-purple-50/20 border-purple-150 text-slate-600 opacity-80'
                 }`}
               >
                 <div>
@@ -136,10 +136,10 @@ export const PipelineProgress = ({
                         status === 'completed'
                           ? 'bg-emerald-100 text-emerald-700'
                           : status === 'running'
-                          ? 'bg-indigo-100 text-indigo-600'
+                          ? 'bg-purple-100 text-purple-600'
                           : status === 'failed'
                           ? 'bg-rose-100 text-rose-700'
-                          : 'bg-slate-200/70 text-slate-500'
+                          : 'bg-purple-100/60 text-purple-500'
                       }`}
                     >
                       <Icon className="w-4 h-4" />

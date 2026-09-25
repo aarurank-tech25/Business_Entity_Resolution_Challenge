@@ -150,19 +150,19 @@ export const ModelInsights = () => {
                 {modelData.features.map((item, idx) => {
                   const percent = Math.round(item.importance * 100);
                   return (
-                    <div key={idx} className="p-2.5 rounded-lg bg-slate-50 border border-slate-200/80">
+                    <div key={idx} className="p-2.5 rounded-lg bg-purple-50/30 border border-purple-150">
                       <div className="flex items-center justify-between text-xs mb-1">
                         <span className="font-semibold text-slate-800">{item.feature}</span>
-                        <span className="font-mono font-bold text-indigo-700">{percent}%</span>
+                        <span className="font-mono font-bold text-purple-700">{percent}%</span>
                       </div>
-                      <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                      <div className="w-full bg-purple-100 h-2 rounded-full overflow-hidden">
                         <div
-                          className="bg-indigo-600 h-full rounded-full transition-all duration-500"
+                          className="bg-purple-600 h-full rounded-full transition-all duration-500"
                           style={{ width: `${percent}%` }}
                         />
                       </div>
                       {item.description && (
-                        <div className="text-[11px] text-slate-500 mt-1">{item.description}</div>
+                        <div className="text-[11px] text-purple-900/60 mt-1">{item.description}</div>
                       )}
                     </div>
                   );
@@ -177,28 +177,29 @@ export const ModelInsights = () => {
                     layout="vertical"
                     margin={{ top: 10, right: 30, left: 40, bottom: 10 }}
                   >
-                    <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#E2E8F0" />
+                    <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#EFE8FE" />
                     <XAxis
                       type="number"
                       domain={[0, 0.4]}
                       tickFormatter={(v) => `${(v * 100).toFixed(0)}%`}
-                      tick={{ fill: '#64748B', fontSize: 11 }}
+                      tick={{ fill: '#7C6E8F', fontSize: 11 }}
                     />
                     <YAxis
                       type="category"
                       dataKey="feature"
                       width={120}
-                      tick={{ fill: '#475569', fontSize: 11 }}
+                      tick={{ fill: '#4C3B66', fontSize: 11 }}
                     />
                     <Tooltip
                       formatter={(v) => [`${(v * 100).toFixed(1)}%`, 'Importance Weight']}
                       contentStyle={{
-                        borderRadius: '8px',
-                        border: '1px solid #E2E8F0',
+                        borderRadius: '12px',
+                        border: '1px solid #EFE8FE',
+                        boxShadow: '0 10px 15px -3px rgba(109, 40, 217, 0.08)',
                         fontSize: '12px',
                       }}
                     />
-                    <Bar dataKey="importance" fill="#4F46E5" radius={[0, 4, 4, 0]} />
+                    <Bar dataKey="importance" fill="#7C3AED" radius={[0, 4, 4, 0]} />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
@@ -229,26 +230,27 @@ export const ModelInsights = () => {
                 data={modelData.score_distribution}
                 margin={{ top: 10, right: 20, left: 10, bottom: 20 }}
               >
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#EFE8FE" />
                 <XAxis
                   dataKey="score_bucket"
-                  tick={{ fill: '#64748B', fontSize: 12 }}
+                  tick={{ fill: '#7C6E8F', fontSize: 12 }}
                   tickLine={false}
                 />
                 <YAxis
-                  tick={{ fill: '#64748B', fontSize: 11 }}
+                  tick={{ fill: '#7C6E8F', fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                 />
                 <Tooltip
                   formatter={(val) => [val.toLocaleString(), 'Candidate Pairs']}
                   contentStyle={{
-                    borderRadius: '8px',
-                    border: '1px solid #E2E8F0',
+                    borderRadius: '12px',
+                    border: '1px solid #EFE8FE',
+                    boxShadow: '0 10px 15px -3px rgba(109, 40, 217, 0.08)',
                     fontSize: '12px',
                   }}
                 />
-                <Bar dataKey="count" fill="#6366F1" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="count" fill="#8B5CF6" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

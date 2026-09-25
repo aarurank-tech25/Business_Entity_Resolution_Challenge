@@ -26,7 +26,7 @@ export const EntityDetailsModal = ({
       footer={
         <div className="flex items-center justify-between w-full">
           <div className="text-xs text-slate-500 flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-indigo-600" />
+            <ShieldCheck className="w-4 h-4 text-purple-600" />
             <span>Scores calculated by backend ML model & feature pipeline</span>
           </div>
           <Button variant="secondary" size="sm" onClick={onClose}>
@@ -73,13 +73,13 @@ export const EntityDetailsModal = ({
         {/* Side-by-Side Comparison Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Source 1 Record */}
-          <div className="p-4 rounded-xl border border-indigo-200/80 bg-indigo-50/20 flex flex-col justify-between">
+          <div className="p-4 rounded-xl border border-purple-200 bg-purple-50/30 flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between mb-3 pb-2 border-b border-indigo-100">
-                <span className="text-xs font-bold text-indigo-900 uppercase tracking-wide">
+              <div className="flex items-center justify-between mb-3 pb-2 border-b border-purple-100">
+                <span className="text-xs font-bold text-purple-950 uppercase tracking-wide">
                   Source 1 (Master Entity)
                 </span>
-                <span className="font-mono text-xs font-bold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">
+                <span className="font-mono text-xs font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">
                   {s1.entity_id || '—'}
                 </span>
               </div>
@@ -88,7 +88,7 @@ export const EntityDetailsModal = ({
                 <div>
                   <span className="text-slate-400 block text-[11px]">Business Name</span>
                   <div className="font-bold text-slate-900 text-sm mt-0.5 flex items-start gap-1.5">
-                    <Building2 className="w-4 h-4 text-indigo-500 shrink-0 mt-0.5" />
+                    <Building2 className="w-4 h-4 text-purple-600 shrink-0 mt-0.5" />
                     <span>{s1.business_name || '—'}</span>
                   </div>
                 </div>

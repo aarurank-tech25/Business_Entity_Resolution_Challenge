@@ -16,7 +16,7 @@ import { BarChart3, Database } from 'lucide-react';
 export const MatchingOverview = ({ data, loading }) => {
   const hasData = Array.isArray(data) && data.length > 0 && data.some((d) => d.value > 0);
 
-  const colors = ['#6366F1', '#10B981', '#F59E0B'];
+  const colors = ['#8B5CF6', '#10B981', '#F59E0B'];
 
   return (
     <Card
@@ -42,15 +42,15 @@ export const MatchingOverview = ({ data, loading }) => {
               data={data}
               margin={{ top: 10, right: 20, left: 10, bottom: 20 }}
             >
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#EFE8FE" />
               <XAxis
                 dataKey="name"
-                tick={{ fill: '#64748B', fontSize: 12 }}
-                axisLine={{ stroke: '#CBD5E1' }}
+                tick={{ fill: '#7C6E8F', fontSize: 12 }}
+                axisLine={{ stroke: '#DDD2FE' }}
                 tickLine={false}
               />
               <YAxis
-                tick={{ fill: '#64748B', fontSize: 11 }}
+                tick={{ fill: '#7C6E8F', fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
                 tickFormatter={(val) => (val >= 1000 ? `${(val / 1000).toFixed(0)}k` : val)}
@@ -59,9 +59,9 @@ export const MatchingOverview = ({ data, loading }) => {
                 formatter={(val) => [val.toLocaleString(), 'Count']}
                 contentStyle={{
                   backgroundColor: '#FFFFFF',
-                  borderRadius: '8px',
-                  border: '1px solid #E2E8F0',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+                  borderRadius: '12px',
+                  border: '1px solid #EFE8FE',
+                  boxShadow: '0 10px 15px -3px rgba(109, 40, 217, 0.08)',
                   fontSize: '12px',
                 }}
               />

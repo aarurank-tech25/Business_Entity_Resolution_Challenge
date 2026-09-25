@@ -92,9 +92,9 @@ export const DataTable = ({
   return (
     <div className={`w-full flex flex-col ${className}`}>
       {/* Table responsive container */}
-      <div className="overflow-x-auto w-full border border-slate-200 rounded-xl bg-white shadow-card">
+      <div className="overflow-x-auto w-full border border-purple-100 rounded-xl bg-white shadow-card">
         <table className="w-full text-left border-collapse min-w-full">
-          <thead className="bg-slate-50 border-b border-slate-200">
+          <thead className="bg-purple-50/50 border-b border-purple-100">
             <tr>
               {columns.map((col, idx) => {
                 const isSortable = col.sortable !== false;
@@ -103,22 +103,22 @@ export const DataTable = ({
                   <th
                     key={col.accessor || idx}
                     onClick={() => isSortable && col.accessor && handleSort(col.accessor)}
-                    className={`font-semibold text-slate-600 uppercase tracking-wider ${densityStyles.th} ${
-                      isSortable && col.accessor ? 'cursor-pointer hover:bg-slate-100 select-none' : ''
+                    className={`font-semibold text-purple-950/80 uppercase tracking-wider ${densityStyles.th} ${
+                      isSortable && col.accessor ? 'cursor-pointer hover:bg-purple-100/50 select-none' : ''
                     } ${col.headerClassName || ''}`}
                   >
                     <div className="flex items-center gap-1.5">
                       <span>{col.header}</span>
                       {isSortable && col.accessor && (
-                        <span className="text-slate-400">
+                        <span className="text-purple-300">
                           {isCurrentSort ? (
                             sortDirection === 'asc' ? (
-                              <ChevronUp className="w-3.5 h-3.5 text-indigo-600" />
+                              <ChevronUp className="w-3.5 h-3.5 text-purple-600" />
                             ) : (
-                              <ChevronDown className="w-3.5 h-3.5 text-indigo-600" />
+                              <ChevronDown className="w-3.5 h-3.5 text-purple-600" />
                             )
                           ) : (
-                            <ChevronsUpDown className="w-3 h-3 text-slate-300" />
+                            <ChevronsUpDown className="w-3 h-3 text-purple-300" />
                           )}
                         </span>
                       )}
@@ -128,14 +128,14 @@ export const DataTable = ({
               })}
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-100 bg-white">
+          <tbody className="divide-y divide-purple-50/80 bg-white">
             {paginatedData.map((row, rowIndex) => {
               const rowKey = row[keyField] || rowIndex;
               return (
                 <tr
                   key={rowKey}
                   onClick={() => onRowClick && onRowClick(row)}
-                  className={`transition-colors hover:bg-indigo-50/40 ${
+                  className={`transition-colors hover:bg-purple-50/50 ${
                     onRowClick ? 'cursor-pointer' : ''
                   }`}
                 >

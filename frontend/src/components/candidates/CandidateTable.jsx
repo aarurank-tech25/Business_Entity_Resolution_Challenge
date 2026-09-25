@@ -58,7 +58,7 @@ export const CandidateTable = ({ candidates = [], loading, onRefresh }) => {
       accessor: 'source1',
       render: (s1) => (
         <div className="flex flex-col">
-          <span className="font-mono text-xs font-semibold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded w-fit">
+          <span className="font-mono text-xs font-semibold text-purple-700 bg-purple-50 border border-purple-200/60 px-1.5 py-0.5 rounded w-fit">
             {s1?.entity_id}
           </span>
           <span className="text-xs font-medium text-slate-900 mt-1 max-w-[180px] truncate" title={s1?.business_name}>
@@ -146,7 +146,7 @@ export const CandidateTable = ({ candidates = [], loading, onRefresh }) => {
             e.stopPropagation();
             setActiveCandidateModal(row);
           }}
-          className="p-1.5 rounded-lg bg-indigo-50 text-indigo-700 hover:bg-indigo-100 transition-colors cursor-pointer"
+          className="p-1.5 rounded-lg bg-purple-50 text-purple-700 hover:bg-purple-100 transition-colors cursor-pointer border border-purple-200/60"
           title="Compare records in detail"
           aria-label="Inspect candidate pair"
         >
@@ -163,13 +163,13 @@ export const CandidateTable = ({ candidates = [], loading, onRefresh }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {/* Search Input */}
           <div className="relative lg:col-span-2">
-            <Search className="w-4 h-4 absolute left-3 top-3 text-slate-400" />
+            <Search className="w-4 h-4 absolute left-3 top-3 text-purple-400" />
             <input
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search Entity ID or Business Name..."
-              className="w-full text-xs pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              className="w-full text-xs pl-9 pr-3 py-2 bg-purple-50/30 border border-purple-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-400"
             />
           </div>
 
@@ -178,7 +178,7 @@ export const CandidateTable = ({ candidates = [], loading, onRefresh }) => {
             <select
               value={selectedDecision}
               onChange={(e) => setSelectedDecision(e.target.value)}
-              className="w-full text-xs px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 cursor-pointer"
+              className="w-full text-xs px-3 py-2 bg-purple-50/30 border border-purple-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-400 cursor-pointer text-slate-800"
             >
               <option value="ALL">All Decisions</option>
               <option value="MATCH">MATCH Only</option>
@@ -191,7 +191,7 @@ export const CandidateTable = ({ candidates = [], loading, onRefresh }) => {
             <select
               value={selectedCountry}
               onChange={(e) => setSelectedCountry(e.target.value)}
-              className="w-full text-xs px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 cursor-pointer"
+              className="w-full text-xs px-3 py-2 bg-purple-50/30 border border-purple-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-purple-400 cursor-pointer text-slate-800"
             >
               <option value="ALL">All Countries</option>
               {countries.map((c) => (
@@ -204,9 +204,9 @@ export const CandidateTable = ({ candidates = [], loading, onRefresh }) => {
 
           {/* Min Score Slider */}
           <div className="flex flex-col justify-center px-1">
-            <div className="flex items-center justify-between text-[11px] text-slate-500 mb-1">
+            <div className="flex items-center justify-between text-[11px] text-purple-900/70 mb-1">
               <span>Min Score:</span>
-              <span className="font-mono font-bold text-slate-700">{minScore}%</span>
+              <span className="font-mono font-bold text-purple-700">{minScore}%</span>
             </div>
             <input
               type="range"
@@ -215,7 +215,7 @@ export const CandidateTable = ({ candidates = [], loading, onRefresh }) => {
               step="5"
               value={minScore}
               onChange={(e) => setMinScore(Number(e.target.value))}
-              className="w-full accent-indigo-600 h-1.5 bg-slate-200 rounded-lg cursor-pointer"
+              className="w-full accent-purple-600 h-1.5 bg-purple-100 rounded-lg cursor-pointer"
             />
           </div>
         </div>

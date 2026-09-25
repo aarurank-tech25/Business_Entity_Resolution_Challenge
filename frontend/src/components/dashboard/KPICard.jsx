@@ -11,29 +11,29 @@ export const KPICard = ({
 }) => {
   const colorMap = {
     indigo: {
-      iconBg: 'bg-indigo-50 text-indigo-600',
-      border: 'border-slate-200 hover:border-indigo-300',
-      accent: 'text-indigo-600',
+      iconBg: 'bg-purple-50 text-purple-700 border border-purple-200/80',
+      border: 'border-purple-100 hover:border-purple-300 hover:shadow-card-hover',
+      accent: 'text-purple-700',
     },
     blue: {
-      iconBg: 'bg-blue-50 text-blue-600',
-      border: 'border-slate-200 hover:border-blue-300',
-      accent: 'text-blue-600',
+      iconBg: 'bg-purple-50/80 text-purple-600 border border-purple-200/60',
+      border: 'border-purple-100 hover:border-purple-300 hover:shadow-card-hover',
+      accent: 'text-purple-600',
     },
     emerald: {
-      iconBg: 'bg-emerald-50 text-emerald-600',
-      border: 'border-slate-200 hover:border-emerald-300',
+      iconBg: 'bg-emerald-50 text-emerald-600 border border-emerald-200/60',
+      border: 'border-purple-100 hover:border-emerald-300 hover:shadow-card-hover',
       accent: 'text-emerald-600',
     },
     amber: {
-      iconBg: 'bg-amber-50 text-amber-600',
-      border: 'border-slate-200 hover:border-amber-300',
+      iconBg: 'bg-amber-50 text-amber-600 border border-amber-200/60',
+      border: 'border-purple-100 hover:border-amber-300 hover:shadow-card-hover',
       accent: 'text-amber-600',
     },
     slate: {
-      iconBg: 'bg-slate-100 text-slate-600',
-      border: 'border-slate-200 hover:border-slate-300',
-      accent: 'text-slate-600',
+      iconBg: 'bg-purple-50/60 text-purple-700 border border-purple-200/60',
+      border: 'border-purple-100 hover:border-purple-300 hover:shadow-card-hover',
+      accent: 'text-purple-700',
     },
   };
 
@@ -51,19 +51,19 @@ export const KPICard = ({
     >
       <div className="flex items-start justify-between gap-3">
         <div className="space-y-1">
-          <span className="text-xs font-medium text-slate-500 tracking-wide uppercase">
+          <span className="text-xs font-semibold text-purple-900/60 tracking-wide uppercase">
             {label}
           </span>
           <div className="mt-1">
             {loading ? (
-              <div className="h-8 w-24 bg-slate-100 animate-pulse rounded-md" />
+              <div className="h-8 w-24 bg-purple-50 animate-pulse rounded-md" />
             ) : formattedValue !== null ? (
               <div className="text-2xl font-bold text-slate-900 tracking-tight">
                 {formattedValue}
               </div>
             ) : (
-              <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium py-1">
-                <Clock className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <div className="flex items-center gap-1.5 text-xs text-purple-400 font-medium py-1">
+                <Clock className="w-3.5 h-3.5 text-purple-400 shrink-0" />
                 <span>Waiting for backend data</span>
               </div>
             )}
@@ -71,14 +71,14 @@ export const KPICard = ({
         </div>
 
         {Icon && (
-          <div className={`p-2.5 rounded-xl ${scheme.iconBg} shrink-0`}>
+          <div className={`p-2.5 rounded-xl ${scheme.iconBg} shrink-0 shadow-xs`}>
             <Icon className="w-5 h-5" />
           </div>
         )}
       </div>
 
       {secondaryText && (
-        <div className="mt-3 pt-2.5 border-t border-slate-100 text-[11px] text-slate-500">
+        <div className="mt-3 pt-2.5 border-t border-purple-100/60 text-[11px] text-purple-900/60">
           {secondaryText}
         </div>
       )}
