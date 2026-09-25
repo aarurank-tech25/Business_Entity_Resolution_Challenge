@@ -37,7 +37,7 @@ export const MOCK_RECENT_ACTIVITY = [
     timestamp: '2026-09-25 11:48:12',
     action: 'Output downloaded (matching_results.tsv)',
     status: 'Completed',
-    user: 'Member 4 (UI Demo)',
+    user: 'Dhinesh (Member 4)',
     type: 'download',
   },
   {

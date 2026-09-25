@@ -47,12 +47,12 @@ export function App() {
             </main>
 
             {/* Enterprise Dashboard Footer */}
-            <footer className="px-6 py-4 border-t border-slate-200/80 bg-white text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <footer className="px-6 py-4 border-t border-purple-100 bg-white/80 text-xs text-purple-900/60 flex flex-col sm:flex-row items-center justify-between gap-2">
               <div>
-                <span className="font-semibold text-slate-700">EntityResolve AI</span> &bull; Business Entity Resolution System
+                <span className="font-semibold text-purple-950">EntityResolve AI</span> &bull; Business Entity Resolution System
               </div>
-              <div className="flex items-center gap-4 text-slate-400">
-                <span>Member 4 &bull; React Frontend</span>
+              <div className="flex items-center gap-4 text-purple-500">
+                <span>Dhinesh (Member 4) &bull; React Frontend Lead</span>
                 <span>FastAPI REST Integration</span>
               </div>
             </footer>

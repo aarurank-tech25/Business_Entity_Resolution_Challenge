@@ -177,11 +177,11 @@ export const Header = ({ onOpenSidebar }) => {
         {/* User Avatar */}
         <div className="flex items-center gap-2 pl-2 border-l border-purple-100">
           <div className="w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold text-xs shadow-xs">
-            M4
+            D
           </div>
           <div className="hidden lg:block text-left">
-            <div className="text-xs font-semibold text-slate-800 leading-none">Member 4</div>
-            <div className="text-[10px] text-purple-600 mt-0.5 leading-none font-medium">Frontend UI/UX</div>
+            <div className="text-xs font-semibold text-slate-800 leading-none">Dhinesh</div>
+            <div className="text-[10px] text-purple-600 mt-0.5 leading-none font-medium">Member 4 • Frontend</div>
           </div>
         </div>
       </div>

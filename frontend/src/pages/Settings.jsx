@@ -283,23 +283,41 @@ export const Settings = () => {
             </p>
 
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <span className="font-bold text-slate-900 block mb-2">Team Responsibilities:</span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-xs">
-                <div className="p-2 rounded bg-white border border-slate-200">
-                  <span className="font-semibold text-slate-900 block">Member 1</span>
-                  <span className="text-slate-500">Preprocessing & Candidate Blocking</span>
+              <span className="font-bold text-slate-900 block mb-2.5">Team Responsibilities:</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs">
+                <div className="p-3 rounded-xl bg-white border border-purple-100 shadow-xs">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-bold text-slate-900 block">Devavarnine</span>
+                    <span className="text-[10px] font-mono text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded border border-purple-200/60 font-semibold">Member 1</span>
+                  </div>
+                  <span className="text-slate-500 text-[11px]">Preprocessing & Candidate Blocking</span>
                 </div>
-                <div className="p-2 rounded bg-white border border-slate-200">
-                  <span className="font-semibold text-slate-900 block">Member 2</span>
-                  <span className="text-slate-500">ML Scoring & Similarity Features</span>
+
+                <div className="p-3 rounded-xl bg-white border border-purple-200 shadow-xs ring-1 ring-purple-100">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                      <span>Aaruran</span>
+                      <span className="text-[10px] font-bold text-amber-800 bg-amber-100 border border-amber-200 px-1.5 py-0.2 rounded">Lead</span>
+                    </span>
+                    <span className="text-[10px] font-mono text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded border border-purple-200/60 font-semibold">Member 2</span>
+                  </div>
+                  <span className="text-slate-500 text-[11px]">ML Scoring & Similarity Features</span>
                 </div>
-                <div className="p-2 rounded bg-white border border-slate-200">
-                  <span className="font-semibold text-slate-900 block">Member 3</span>
-                  <span className="text-slate-500">FastAPI Backend Pipeline Services</span>
+
+                <div className="p-3 rounded-xl bg-white border border-purple-100 shadow-xs">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-bold text-slate-900 block">Ajay</span>
+                    <span className="text-[10px] font-mono text-purple-700 bg-purple-50 px-1.5 py-0.5 rounded border border-purple-200/60 font-semibold">Member 3</span>
+                  </div>
+                  <span className="text-slate-500 text-[11px]">FastAPI Backend Pipeline Services</span>
                 </div>
-                <div className="p-2 rounded-xl bg-purple-50/80 border border-purple-200 text-purple-950">
-                  <span className="font-bold text-purple-950 block">Member 4 (Current)</span>
-                  <span className="text-purple-700 font-medium">React Frontend / UI-UX Architecture</span>
+
+                <div className="p-3 rounded-xl bg-purple-50/80 border border-purple-200 text-purple-950 shadow-xs">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="font-bold text-purple-950 block">Dhinesh</span>
+                    <span className="text-[10px] font-mono text-purple-700 bg-purple-100 px-1.5 py-0.5 rounded border border-purple-300 font-bold">Member 4 (You)</span>
+                  </div>
+                  <span className="text-purple-700 font-medium text-[11px]">React Frontend / UI-UX Architecture</span>
                 </div>
               </div>
             </div>

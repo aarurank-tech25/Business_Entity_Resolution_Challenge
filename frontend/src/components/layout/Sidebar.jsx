@@ -147,14 +147,14 @@ export const Sidebar = ({ isOpen, setIsOpen }) => {
           {/* User Profile Card */}
           <div className="flex items-center gap-2.5 px-2 py-1">
             <div className="w-8 h-8 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold text-xs shadow-xs">
-              M4
+              D
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-xs font-bold text-purple-950 truncate">
-                Member 4
+                Dhinesh
               </div>
               <div className="text-[10px] text-purple-600/80 truncate font-medium">
-                Frontend / UI-UX Lead
+                Member 4 • Frontend Lead
               </div>
             </div>
           </div>
