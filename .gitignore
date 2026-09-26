@@ -1,0 +1,30 @@
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Challenge Datasets (Never commit datasets)
+dataset/
+datasets/
+*.tsv
+*.csv
+!tests/data/*.tsv
+
+# Uploaded and Output Files
+uploads/
+backend/uploads/
+outputs/
+backend/outputs/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
