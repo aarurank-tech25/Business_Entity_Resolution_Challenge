@@ -28,3 +28,8 @@ backend/outputs/
 Thumbs.db
 .idea/
 .vscode/
+
+# Frontend dependencies and build outputs
+frontend/node_modules/
+frontend/dist/
+

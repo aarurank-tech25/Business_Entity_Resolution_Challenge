@@ -1,10 +1,51 @@
+import logging
+import warnings
+from contextlib import asynccontextmanager
+
+# Suppress sklearn version-mismatch warnings when loading the pre-trained model.
+# The model (StandardScaler + LogisticRegression Pipeline) is compatible across
+# minor sklearn versions; the warning is informational only.
+warnings.filterwarnings(
+    "ignore",
+    message="Trying to unpickle estimator",
+    category=UserWarning,
+)
+
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+
+logger = logging.getLogger(__name__)
 
 from routes.upload import router as upload_router
 from routes.matching import router as matching_router
 from routes.results import router as results_router
 from routes.metrics import router as metrics_router
+
+
+
+# ---------------------------------------------------------------------------
+# Application Lifespan (startup / shutdown)
+# ---------------------------------------------------------------------------
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """
+    Register the ML pipeline at startup so POST /run-matching works immediately.
+    If the ml package cannot be imported, the server still starts cleanly;
+    /run-matching will return 503 until the issue is resolved.
+    """
+    try:
+        import ml.pipeline as ml_pipeline
+        ml_pipeline.register()
+        logger.info("ML pipeline registered successfully.")
+    except Exception as exc:  # noqa: BLE001
+        logger.error(
+            "Failed to register ML pipeline at startup: %s. "
+            "POST /run-matching will return 503 until this is fixed.",
+            exc,
+        )
+    yield  # App runs here
 
 
 app = FastAPI(
@@ -15,6 +56,19 @@ app = FastAPI(
         "challenge output validation, and results download."
     ),
     version="1.0.0",
+    lifespan=lifespan,
+)
+
+# ---------------------------------------------------------------------------
+# CORS Middleware
+# ---------------------------------------------------------------------------
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
